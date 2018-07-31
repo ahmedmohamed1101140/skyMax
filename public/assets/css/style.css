@@ -1,0 +1,3715 @@
+@font-face {
+    font-family: 'MYRIADPROREGULAR';
+    src: url('../fonts/MYRIADPROREGULAR.eot');
+    src: local('../fonts/MYRIADPROREGULAR'), url('../fonts/MYRIADPROREGULAR.woff') format('woff'), url('../fonts/MYRIADPROREGULAR.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MyriadPro-Bold';
+    src: url('../fonts/MyriadPro-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/MyriadPro-Bold.otf')  format('opentype'),
+    url('../fonts/MyriadPro-Bold.woff') format('woff'), url('../fonts/MyriadPro-Bold.ttf')  format('truetype'), url('../fonts/MyriadPro-Bold.svg#MyriadPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyriadPro-Light';
+    src: url('../fonts/MyriadPro-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/MyriadPro-Light.otf')  format('opentype'),	     url('../fonts/MyriadPro-Light.woff') format('woff'), url('../fonts/MyriadPro-Light.ttf')  format('truetype'), url('../fonts/MyriadPro-Light.svg#MyriadPro-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MYRIADPROREGULAR' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-right:0 !important;
+
+}
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px ;
+    /*overflow-x: hidden; */
+}
+
+a, a:hover, a:focus, a:visited, a:link, a:active {outline:none !important}
+body.modal-open .search-bar { right:120px;z-index: 999; }
+body.modal-open .insd .search-bar { right:137px;z-index: 999; }
+body.modal-open header {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    /*position: fixed;*/
+    top: 0;
+    z-index: 999;
+    /*left: -17px;*/
+
+    right: 0;
+}
+body.modal-open header.inside1 { right:-17px}
+body.modal-open .top-bar{background:rgba(0,0,0, .25);}
+body.modal-open .inside .top-bar{background:#fff;}
+.top-bar {padding-top:5px; padding-bottom:5px; position:absolute; top:0; right:0; left:0; border-bottom:white solid 1px; z-index:999}
+ul.toplist {
+    list-style-type: none;
+    padding-left: 0;
+    padding-top: 5px;
+    margin-bottom: 0;
+}
+ul.toplist li {display:inline-block; margin:2px 5px;  }
+ul.toplist li a {
+    color:#fff;
+    font-size:15px;
+}
+.top-bar p {margin-bottom:0; color:#fff; text-align:right; font-size:15px}
+ul.toplist li a:hover {text-decoration:underline}
+
+
+.dropdown.menu {padding-left:0}
+
+#primary-nav-button {
+    background: transparent;
+    display: none;
+    border: 1px solid #aaa;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0;
+}
+
+#primary-nav-button:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+#primary-nav-button.selected {
+    background: rgba(0,0,0,0.1);
+}
+
+#primary-nav-button:before {
+    /* content: '☰'; */
+    content: '\2261';
+    display: block;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.05;
+    height: 1em;
+    width: 1em;
+    color: inherit;
+    speak: none;
+}
+
+.menu li {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    list-style-type:none;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu .sub-menu li {
+    width: 100%;
+    list-style:none;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+}
+
+#top-nav li a {
+    color: #8CC152;
+    padding: 5px 0;
+}
+
+#top-nav .sub-menu {
+    background: #fff;
+}
+
+#top-nav .sub-menu li a {
+    padding: 5px;
+}
+
+#top-nav .sub-menu li > a:hover,
+#top-nav .sub-menu li.selected > a {
+    background: transparent;
+    color: #83f0ff;
+}
+
+#primary-nav li a {
+    color: #fff;
+    font-size:16px;
+    line-height:normal;
+    padding: 6px 10px;
+}
+
+#primary-nav li.active > a,
+#primary-nav li > a:hover,
+#primary-nav li.selected > a {
+    background: transparent;
+    color: #83f0ff;
+}
+
+.downarrow {
+    background: none;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    min-width: 3px;
+}
+
+.sub-menu .downarrow {
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+}
+
+.downarrow:before {
+    content: '\25be';
+    color: inherit;
+    display: block;
+    font-family: sans-serif;
+    font-size: 1em;
+    line-height: 1.1;
+    width: 1em;
+    height: 1em;
+}
+
+.menu .sub-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    max-height: 1000px;
+}
+
+.menu .sub-menu.hide {
+    display: none;
+}
+
+#primary-nav .sub-menu {
+    background: #5f645d;
+    min-width: 150px;
+    z-index: 200;
+    border-radius:6px;
+    border:solid 1px white;
+    padding-left:0;
+}
+
+#primary-nav .sub-menu li {
+    /* border-bottom: 1px solid #7cb142;*/
+}
+
+#primary-nav .sub-menu li:last-child {
+    border-bottom: 0;
+}
+
+#primary-nav .sub-menu .downarrow:before {
+    content: '\25b8';
+}
+
+#primary-nav.mobile {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: #A0D468;
+    width: 100%;
+}
+
+#primary-nav.mobile li {
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid #7cb142;
+}
+
+#primary-nav.mobile li.selected > a {
+    border-bottom: 1px solid #7cb142;
+}
+
+#primary-nav.mobile li:last-child {
+    border: none;
+}
+
+#primary-nav.mobile li a {
+    padding: 5%;
+}
+
+#primary-nav.mobile .sub-menu li a {
+    padding-left: 7%;
+}
+
+#primary-nav.mobile .sub-menu .submenu li a {
+    padding-left: 9%;
+}
+
+#primary-nav.mobile .sub-menu .sub-menu .sub-menu li a {
+    padding-left: 11%;
+}
+
+#primary-nav.mobile .sub-menu {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+.mobile .downarrow,
+.mobile .sub-menu .downarrow {
+    position: absolute;
+    right: 0;
+    padding-right: 5%;
+}
+
+#primary-nav.mobile .sub-menu .downarrow:before {
+    content: '\25be';
+}
+#primary-nav-button.mobile {
+    display: inline-block;
+}
+
+.logo {position:absolute; top:60px; left:105px; z-index:99999}
+.side-bar h2 {font-size:24px; color:#003b4f; font-family:'MyriadPro-Bold'; margin-bottom:25px}
+
+.categs label {
+    cursor: pointer;
+    color: #003b4f;
+    font-size:16px;
+    margin-top:5px;
+    font-family:'MYRIADPROREGULAR';
+}
+label {
+    cursor: pointer;
+    color: #003b4f;
+    font-size:18px;
+    font-family:'MYRIADPROREGULAR';
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + .label-text:before {
+    content: "\f096";
+    font-family: "FontAwesome";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    width: 1em;
+    display: inline-block;
+    margin-right: 5px;
+}
+input[type="checkbox"]:checked + .label-text:before {
+    content: "\f14a";
+    color: #08bb90;
+    animation: tick 150ms ease-in;
+}
+input[type="checkbox"]:disabled + .label-text {
+    color: #aaa;
+}
+input[type="checkbox"]:disabled + .label-text:before {
+    content: "\f0c8";
+    color: #ccc;
+}
+
+@keyframes tick {
+    0% {
+        transform: scale(0);
+    }
+    90% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+.is-hidden {
+    display: none !important;
+}
+
+
+
+.load-more, .loading {
+    display: block;
+    padding: 10px 16px;
+    border-radius: 0px;
+    clear: both;
+    background-color: #ccc;
+    color: #666;
+    width: 100px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.load-more:hover {
+    background-color: #333;
+    color: white;
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.list {
+    width: 100%;
+    margin: 0px ;
+}
+
+.element {
+    width: 240px;
+    height: 450px;
+    /*background-color: #ccc;*/
+    float: left;
+    margin: 0 0.15% 15px 2%;
+    transform: scale(0.01);
+}
+.element img {max-width:100%}
+.element-in {
+    animation: listIn 0.4s ease;
+    transform: scale(1);
+}
+.element p { font-size:15px; line-height:normal; height:50px; overflow:hidden; margin-top:10px; color:#003b4f; margin-bottom:15px}
+.element h3 {font-size:22px; color:#003b4f; font-family: 'MyriadPro-Bold' !important; margin-bottom:20px}
+@keyframes listIn {
+    from {
+        transform: scale(0.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+
+#filter {margin-bottom:25px}
+.filter-container input[type=text] {
+    height: 46px;
+    width: 300px;
+    vertical-align: top;
+    margin-right: 3px;
+    border-radius: 0px;
+    border: none;
+    background: #e9e8e8;
+    line-height: 20px;
+    padding: 5px 10px 5px 20px;
+    color: #8a8a8a;
+    font-size:16px;
+    box-shadow:none !important;
+}
+
+input, select, textarea {
+    outline: 0;
+}
+
+.filter-container .btn, .myform .btn {
+    padding: 12px 10px;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'MYRIADPROREGULAR' !important;
+    width:18%;
+    margin-bottom:5px;
+
+}
+
+.btn-custom-3 {
+    color: #fff;
+    background-color: #969c9a;
+
+    border-radius:0 !important;
+}
+
+.btn-custom-3:hover {
+    color: #fff;
+    background-color: #8b8b8b;
+    border-radius:0;
+}
+
+.nwfilter .btn-custom-3 {
+    color: #fff;
+    background-color: #dc4844;
+
+    border-radius:0 !important;
+}
+
+.nwfilter .btn-custom-3:hover {
+    color: #fff;
+    background-color: #ce403c;
+    border-radius:0;
+}
+.contents {margin-top:30px; margin-bottom:30px}
+.prdct-box {padding-top:20px; border-left:#e9e8e8 8px solid; padding-bottom:25px; padding-left:30px}
+
+.myform label {
+    font-family: 'MyriadPro-Bold' !important;
+    font-size: 16px;
+    letter-spacing: 0px;
+    margin:5px auto 25px;
+    padding-left: 21px;
+    color:#003b4f;
+    margin-right:10px
+}
+.myform input { width:29%; height:46px; margin-right:8px; margin-left:0px; border:none; background:#e9e8e8; color:#a4a4a4; font-size:17px; padding:5px 8px}
+
+.nwbtn {width:100% !important; padding:10px !important}
+.nwbtn {
+    color: #fff;
+    font-size:18px !important;
+    background-color: #08bb90;
+    border: none !important;
+    border-radius:0 !important;
+    display:block !important;
+    font-family:'MyriadPro-Bold' !important;
+    width:100%;
+    margin-top:20px;
+    transition:all ease-in .25s;
+
+}
+.nwbtn:hover,
+.nwbtn:focus,
+.nwbtn:active,
+.nwbtn.active,
+.open > .dropdown-toggle.nwbtn {
+    color: #fff;
+    background-color: #05ae85;
+    border: none;
+}
+.nwbtn:active,
+.nwbtn.active,
+.open > .dropdown-toggle.nwbtn {
+    background-image: none;
+}
+
+.price {font-size:18px ; color:#003b4f; font-family:'MyriadPro-Bold' !important;}
+.price span {text-decoration:line-through; color:#CCC; margin-right:25px}
+.cart {
+    background: url(../img/cart.png) no-repeat left center;
+    height: 35px;
+    width: 40px;
+    padding: 25px 10px 25px 25px;
+}
+
+.panel-tabs {
+    /*position: relative;*/
+    /* bottom: 30px;*/
+    /* clear:both;*/
+    /*  border-bottom: 1px solid transparent;*/
+}
+.panel-tabs  {
+    z-index: 1;
+    position: absolute;
+    background: transparent;
+    top: -20px;
+}
+.panel-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+    /*background:#c7c7c7;*/
+}
+.panel-tabs > li:first-child > a {padding-bottom: 50px !important;  border-radius: 10px 10px 0px 0 !important; margin-left:0px !important }
+.panel-tabs > li:last-child.active > a {padding-bottom: 50px !important;  border-radius: 10px 10px 0px 10px !important; margin-left:-10px !important }
+.panel-tabs > li > a {
+    margin-right: 2px;
+    margin-top: 4px;
+    line-height: 10px;
+    border: 1px solid transparent;
+    border-radius: 0px 10px 0px 0;
+    color: #797878;
+    font-size:20px;
+    font-family:'MYRIADPROREGULAR' !important;
+    background:#c7c7c7;
+    padding:15px 60px !important;
+    margin-top:5px;
+    margin-left:-3px;
+
+}
+
+.panel-tabs > li > a:hover {
+    border-color: transparent;
+    color: #08bb90;
+    background-color: #fff !important;
+}
+
+.panel-tabs > li.active > a,
+.panel-tabs > li.active > a:hover,
+.panel-tabs > li.active > a:focus {
+    color: #08bb90;
+    cursor: default;
+    font-family:'MyriadPro-Bold' !important;
+    -webkit-border-radius: 10px;
+    -moz-border-radius:10px;
+    border-radius: 0px 10px 0px 0px;
+    background-color: #fff;
+    border-bottom-color: transparent;
+    font-size:20px;
+    padding:15px 60px;
+    margin-top:0;
+    padding-top:20px !important;
+
+}
+.center {
+    margin-top:50px;
+}
+
+.modal-header {
+    padding-bottom: 5px;
+}
+
+.modal-footer {
+    padding: 0;
+}
+
+.modal-footer .btn-group button {
+    height:40px;
+    border-top-left-radius : 0;
+    border-top-right-radius : 0;
+    border: none;
+    border-right: 1px solid #ddd;
+}
+
+.modal-footer .btn-group:last-child > button {
+    border-right: 0;
+}
+.tab-content {padding:45px 15px 15px}
+
+.chk {font-size:16px; color:#797878}
+.chk input[type="checkbox"] {display:block !important}
+.red {color:red !important; margin-bottom:2px; font-size:11px !important;}
+.formlnk a{color:#08bb90; font-size:16px}
+
+.selecty {
+
+
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+
+    background: url(../img/arrow1.png) no-repeat 94% center ;
+    cursor:pointer;
+
+}
+
+
+/* footer */
+
+footer {
+    padding: 30px 0 10px;
+    background-color: #2f3b41;
+    position: relative;
+    margin-top:60px;
+    /*border-top: 8px solid #ff7a59;*/
+}
+
+/*.footer:hover {
+    border-top: 8px solid #ff6640;
+    }*/
+
+
+.footer-area {
+    position: relative;
+    border-top: 0;
+    margin-top: 0;
+    padding: 15px 0;
+    background: #2f3b41;
+    border-top: 1px solid #495157;
+}
+
+
+
+.footer-area p {
+    margin: 0;
+    font-size: 14px;
+    margin-top: 8px;
+    color: #e0e0e0;
+}
+
+.footer-area p a {
+    color: #08bb90;
+    text-decoration: none;
+}
+
+
+.social-buttons {
+    text-align: left;
+}
+
+.social_icons {
+    min-height: 50px;
+    padding: 0;
+    width: auto;
+    display: inherit;
+    margin: 0 auto;
+
+    padding: 30px;
+    background-color: #2f3b41;
+}
+
+.social_icons>a {
+    display: inline-block;
+    width: 50px;
+    line-height: 50px;
+    height: 50px;
+    margin: 0 5px;
+    border: 1px solid #495157;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.social_icons>a:hover {
+
+}
+
+.social_icons>a:hover>i:first-child {
+    margin-top: 0;
+    color: #08bb90;
+}
+
+.social_icons>a>i {
+    transition: all 0.3s ease;
+    display: block;
+    position: relative;
+    margin-top: 0;
+    height: 100%;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 120%;
+    background: #2d3a3f;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.social_icons>a>i:first-child {
+    margin-top: -48px;
+}
+
+
+.inside1 {background:#383838}
+
+#page-inside2 {
+    height: 480px;
+    background:#60c4b8;
+    background-image:url(../img/event.jpg);
+    background-position:bottom right;
+    background-repeat:no-repeat;
+
+}
+#page-inside3 {
+    height: 500px;
+    background:#9c488d;
+    position:relative;
+
+}
+#page-inside4 {
+    height: 440px;
+    background:#00618b;
+    position:relative;
+
+}
+#page-inside5 {
+    height: 400px;
+    background:#e56140;
+    position:relative;
+    background-image:url(../img/abt.png);
+    background-position:bottom right;
+    background-repeat:no-repeat;
+
+}
+#page-inside7 {
+    height: 400px;
+    background:#248bb6;
+    position:relative;
+    background-image:url(../img/cnct.png);
+    background-position:bottom right;
+    background-repeat:no-repeat;
+
+}
+#page-inside6 {
+    height: 400px;
+    background:#248bb6;
+    position:relative;
+
+
+}
+.top-bg {
+    background: url(../img/top-bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    width: 100% !important;
+    height: 300px;
+}
+
+.white {color:#fff}
+.brs a {color:white}
+.brs i{color:#f8c77a; margin-left:10px}
+#page-inside {
+    height: 280px;
+    background:#383838;
+}
+.breadcrumb {
+    background: none !important;
+    /* border: 0px solid rgba(245, 245, 245, 1);
+     border-radius: 25px;*/
+    display: block;
+    margin-top:200px;
+    margin-bottom:0 !important;
+    padding-left:10px
+}
+
+.breadcrumb .btn-primary{
+    font-family: 'MyriadPro-Bold' !important;
+    font-size: 14px;
+    background:#83f0ff;
+    border:none !important;
+    border-radius: 10px;
+    margin-right:5px;
+    color:#333;
+    padding:5px 30px;
+}
+.breadcrumb li {color:#83f0ff !important; font-size:16px;font-family: 'MyriadPro-Bold' !important; vertical-align:sub}
+.breadcrumb li a {color:#fff; font-size:17px;font-family: 'MYRIADPROREGULAR' !important; font-weight:500}
+.breadcrumb li:before {background:url(../img/brd.png) no-repeat center center; content:""; margin-left:3px; margin-right:3px}
+
+.details h3 {color:#009bb7; font-size:22px; font-family: 'MyriadPro-Bold' !important; margin-top:6px; margin-bottom:6px}
+.details h4 {color:#838383; font-size:18px; font-family: 'MyriadPro-Bold' !important; margin-top:6px; margin-bottom:6px}
+.details h4 span {color:#838383; font-size:18px; font-family: 'MYRIADPROREGULAR' !important;}
+.prc1 {background:#383838; margin-top:15px ; margin-bottom:15px }
+.prch1 { font-family:'MyriadPro-Bold' !important; font-size:20px !important; color:#fff !important; padding-left:15px; margin-top:13px}
+.prcno {font-family: 'MYRIADPROREGULAR' !important; color:#fff !important; padding-left:10px;  font-size:16px !important; }
+.strikethrough {
+    position: relative;
+}
+
+.strikethrough:before {
+    border-bottom: 2px solid #f46344;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    top:1px;
+    left:7px
+}
+
+.prch2 { font-family:'MyriadPro-Bold' !important; font-size:20px !important; color:#fff !important; padding-left:15px; margin-top:13px}
+.prch2, .prch1 {padding-bottom:5px; padding-top:5px}
+.prcno1 {font-family: 'MYRIADPROREGULAR' !important; color:#fff !important; padding-left:10px; font-size:20px !important; }
+.desc p {
+    color: #838383;
+    font-family: 'MYRIADPROREGULAR';
+    font-size: 15px !important;
+    margin-bottom: 5px;
+    margin-bottom:40px
+}
+.modal-body #myCarousel a.carousel-control.right {background: url(../img/rightc.png) no-repeat !important;	right: -10px;	top: 45%;	z-index: 999;	height: 50px;	width: 50px;}
+.modal-body	#myCarousel a.carousel-control.left {
+    background: url(../img/leftc.png) no-repeat !important;
+    left: 15px;
+    top: 45%;
+    z-index: 999;
+    height: 50px;
+    width: 50px;
+}
+#myCarousel a.carousel-control.right {background: url(../img/rightc.png) no-repeat !important;	right: -60px;	top: 45%;
+    z-index: 999;	height: 50px;	width: 50px;}
+#myCarousel a.carousel-control.left {
+    background: url(../img/leftc.png) no-repeat !important;
+    left: -35px;
+    top: 45%;
+    z-index: 999;
+    height: 50px;
+    width: 50px;
+}
+#myCarousel a.carousel-control.right span, #myCarousel a.carousel-control.left span {display:none}
+
+#myCarousel .item img {border:1px black solid; width:100%; max-height:300px; height:300px;}
+#slider-thumbs ul li a img {border:1px black solid; width:100%; height:60px;}
+/*.vid1::after {
+	display: block;
+	content: "\f04b";
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -30px 0 0 -30px;
+	line-height: 56px;
+	text-align: center;
+	font-size: 18px;
+	padding-left: 3px;
+	border-radius: 50%;
+	border: 2px solid rgba(255,255,255,0.8);
+	color: rgba(255,255,255,0.8);
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-shadow: 0 0 8px rgba(0,0,0,0.5);
+	box-shadow: 0 0 8px rgba(0,0,0,0.5);
+	transition: all .2s ease-out;
+	-webkit-backface-visibility: hidden;
+}
+.vid::after {
+	display: block;
+	content: "\f04b";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 56%;
+	left: 80%;
+	margin: -30px 0 0 -30px;
+	line-height: 26px;
+	text-align: center;
+	font-size: 18px;
+	padding-left: 3px;
+
+	color: rgba(255,255,255,0.8);
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	transition: all .2s ease-out;
+	-webkit-backface-visibility: hidden;
+}
+*/
+
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
+
+
+.nwbtn1 {
+    color: #fff;
+    font-size:22px !important;
+    background-color: #08bb90;
+    border: none !important;
+    border-radius:0 !important;
+    display:block !important;
+    font-family:'MyriadPro-Bold' !important;
+    width:100%;
+    margin-top:20px;
+    transition:all ease-in .25s;
+
+}
+.nwbtn1:hover,
+.nwbtn1:focus,
+.nwbtn1:active,
+.nwbtn1.active,
+.open > .dropdown-toggle.nwbtn1 {
+    color: #fff;
+    background-color: #e65c3e;
+    border: none;
+}
+.nwbtn1:active,
+.nwbtn1.active,
+.open > .dropdown-toggle.nwbtn1 {
+    background-image: none;
+}
+
+.nwbtn2 {
+    color: #fff;
+    font-size:22px !important;
+    background-color: #dc4844;
+    border: none !important;
+    border-radius:0 !important;
+    display:block !important;
+    font-family:'MyriadPro-Bold' !important;
+    width:100%;
+    margin-top:20px;
+    transition:all ease-in .25s;
+
+}
+.nwbtn2:hover,
+.nwbtn2:focus,
+.nwbtn2:active,
+.nwbtn2.active,
+.open > .dropdown-toggle.nwbtn2 {
+    color: #fff;
+    background-color: #cd3f3b;
+    border: none;
+}
+.nwbtn2:active,
+.nwbtn2.active,
+.open > .dropdown-toggle.nwbtn2 {
+    background-image: none;
+}
+
+
+.nwbtn3 {
+    color: #fff;
+    font-size:20px !important;
+    background-color: #880071;
+    border: none !important;
+    border-radius:0 !important;
+    display:block !important;
+    font-family:'MyriadPro-Bold' !important;
+    width:100%;
+    margin-top:20px;
+    transition:all ease-in .25s;
+
+}
+.nwbtn3:hover,
+.nwbtn3:focus,
+.nwbtn3:active,
+.nwbtn3.active,
+.open > .dropdown-toggle.nwbtn1 {
+    color: #fff;
+    background-color: #7a0065;
+    border: none;
+}
+.nwbtn3:active,
+.nwbtn3.active,
+.open > .dropdown-toggle.nwbtn1 {
+    background-image: none;
+}
+
+
+
+.nwbtn4 {
+    color: #fff;
+    font-size:20px !important;
+    background-color: #1a9bc2;
+    border: none !important;
+    border-radius:0 !important;
+    display:block !important;
+    font-family:'MyriadPro-Bold' !important;
+    width:100%;
+    margin-top:20px;
+    transition:all ease-in .25s;
+
+}
+.nwbtn4:hover,
+.nwbtn4:focus,
+.nwbtn4:active,
+.nwbtn4.active,
+.open > .dropdown-toggle.nwbtn1 {
+    color: #fff;
+    background-color: #1891b6;
+    border: none;
+}
+.nwbtn4:active,
+.nwbtn4.active,
+.open > .dropdown-toggle.nwbtn1 {
+    background-image: none;
+}
+
+.up-form {padding:30px }
+.event-title { padding-top:200px; padding-left:10px; width:48%}
+.event-title h1 {font-size:46px; font-family:'MyriadPro-Bold' !important; color:#fff;}
+.event-title p {font-size:16px; font-family:'MYRIADPROREGULAR' !important; color:#fff;}
+
+.event {margin-bottom:35px}
+.event h3 {
+    color: #003b4f;
+    font-size: 20px;
+    font-family: 'MyriadPro-Bold' !important;
+    height: 40px;
+    overflow: hidden;
+}
+.event p {
+    color: #003b4f;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: normal;
+}
+.event img {margin-bottom:20px}
+.nwcarsl {margin-bottom:20px}
+.nwcarsl .item img {border:none !important}
+.modal-body .event {padding:0 15px 10px}
+.event form {margin-top:10px}
+.item{
+    background: white;
+    text-align: center;
+    height: 300px !important;
+}
+
+.carousel{
+    margin-top: 20px;
+}
+
+.bs-example{
+    margin: 20px;
+}
+
+.carousel.carousel-fade .item {
+    opacity:0;
+    filter: alpha(opacity=0); /* ie fix */
+}
+
+.carousel.carousel-fade .active.item {
+    opacity:1;
+    filter: alpha(opacity=100); /* ie fix */
+}
+.nwfilter {text-align:center}
+
+.close {
+
+    color: #fff;
+    text-shadow: none !important;
+    filter: alpha(opacity=20);
+    opacity: 1;
+    position: absolute;
+    top: 40px;
+    right: -20px;
+    z-index: 999999999;
+    background: #6f6f6f !important;
+    border-radius: 50%;
+    padding: 1px 7px 5px !important;
+}
+.my-menu .close {
+    /* float: right; */
+    /* font-size: 21px; */
+    /* font-weight: bold; */
+    /* line-height: 1; */
+    color: #fff;
+    text-shadow: none !important;
+    filter: alpha(opacity=20);
+    opacity: 1;
+    position: absolute;
+    top: -10px !important;
+    right: -10px !important;
+    z-index: 9999999;
+    /*  background: rgba(0,0,0, .7) !important;*/
+    border-radius: 50%;
+    padding: 1px 7px 5px !important;
+}
+.my-menu {
+    background: #ebeff2;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    padding: 0 20px 20px 20px;
+    position: relative;
+}
+.menu-title {color:#3da0c3; font-size:30px; font-family:'MyriadPro-Bold' !important;}
+.my-menu ul {padding:0; margin-top:15px; margin-bottom:15px; list-style-image:url(../img/sq.jpg);}
+.my-menu ul li {display:list-item;  margin-bottom:10px; font-family:'MYRIADPROREGULAR' !important;}
+.my-menu ul li a {font-size:22px;   color:#4c4c4c;}
+.my-menu ul li a:hover {color:#08bb90;}
+.menu-img { padding-top:20px}
+
+.wallet-box {z-index:99999 !important; padding-top:160px}
+.wallet-box h3 { padding-top:40px; padding-left:50px; background:url(../img/wal-title.png); background-repeat:no-repeat; height:100px; width:280px; font-size:26px;font-family:'MyriadPro-Bold' !important; text-transform:uppercase}
+.wallet-box .sd-box h3 {padding-left:35px}
+.wallet-box .ft-box, .wallet-box .sd-box {width:100%}
+.wallet-box .title {float:left; width:270px; margin-bottom:25px}
+.wallet-box .stats {float:left; width:450px; padding:10px 15px; height:120px; background:#000; border-radius:30px; margin-top:10px}
+.wallet-box .stats h4 {color:#f078db; font-size:18px}
+.wallet-box .stats p {color:#fff; font-size:16px}
+.padd-25 {padding-top:25px !important}
+.transf {position:absolute; right:110px; top:100px; z-index:999}
+.tran-btn {
+    color: #9c488d;
+    border-radius: 0 !important;
+    background-color: #fff;
+    border: solid thin transparent !important;
+    border-radius:10px !important ;
+    font-size:16px;
+}
+.tran-btn:focus,
+.tran-btn.focus {
+    color: #fff;
+    background-color: transparent;
+    border: solid thin #fff !important;
+}
+.tran-btn:hover {
+    color: #fff;
+    background-color: transparent;
+    border: solid thin #fff !important;
+}
+.rd {color:red ; font-weight:bold}
+.bl{color:#009; font-weight:bold}
+.blnc {color:#9c488d; font-weight:bold}
+.magent {color:#ac008f !important}
+.blue {color:#1a9bc2 !important}
+.mymodal h4 {font-size:20px;font-family:'MyriadPro-Bold' !important; padding:12px 10px 10px}
+.mymodal {background:white; border-radius:20px}
+.mymodal ul.tabs {border:none !important; list-style:none; padding-left:0}
+.mymodal .close {right:-10px !important; top:-10px !important}
+.tabs li {
+    float: left;
+    width: 30%;
+}
+.tabs a {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: #888;
+    padding: 20px 0 10px 20px;
+    font-size:16px;
+
+}
+.tabs a { background:url(../img/tab1.png); padding-left:20px; background-repeat:no-repeat; background-position:left 62% }
+.tabs a.active { background:url(../img/tab.png); padding-left:20px; background-repeat:no-repeat; background-position:left 62% }
+
+ul.tabs li a.blue  { background:url(../img/tabb1.png) !important; padding-left:20px; background-repeat:no-repeat !important; background-position:left 62% !important }
+ul.tabs li a.active.blue { background:url(../img/tabb.png) !important; padding-left:20px; background-repeat:no-repeat !important; background-position:left 62%  !important}
+
+.mytabs li {width:auto; margin-right:25px;}
+.mytabs li h4 {font-size:17px}
+.mytabs li a {font-size:16px; display:inline-block; font-size:14px}
+
+.tabs a:hover,
+.tabs a.active {
+
+}
+.tabgroup, .tabgroup1 {
+    padding: 10px 20px;
+
+}
+
+.pd-tp-10 {padding-top:10px}
+
+.trans-acc .panel-default .panel-heading {background:#9c488d;   height: 60px; border-radius:30px; padding: 13px 20px 0;}
+.trans-acc .panel-default {margin-bottom:25px}
+
+.panel-title > a span { line-height:35px}
+.panel-title > a {
+
+    display: block;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: left;
+    color: #ffc7f5;
+}
+
+.more-less {
+    float: right;
+    color: #ffc7f5;
+}
+.wrapper.mymodal {
+    padding: 15px;
+    border: #9c488d thin solid;
+    border-radius: 0 !important;
+    width: 90%;
+    margin: 0 auto;
+    border-top: none;
+}
+.wrapper.mymodal ul.tabs li {display:inline-block; margin-right:25px; width:auto !important; float:none !important}
+.wrapper.mymodal .tabs a {padding:0 0 0 20px !important}
+.wrapper.mymodal .tabgroup, .wrapper.mymodal .tabgroup1 {position:relative}
+.wrapper.mymodal .btn-group {position:absolute; top:-20px; right:20px}
+.ylw:before { content:""; width:15px; height:15px; background:#fe8b0c; display:inline-block; margin-right:7px}
+.ylw {color:#fe8b0c; font-size:20px;font-family:'MyriadPro-Bold' !important; margin-left:-20px}
+span.edited {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+span.meterEdit {
+    padding: 3px;
+    display: inline;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.meterReadings {
+    text-align: right;
+    margin-bottom:0;
+}
+
+.unionPencil:hover {
+    cursor:pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.unionPencil {
+    transition: opacity 0.2s ease-in-out;
+    margin-bottom:0;
+}
+
+.meterEditable{
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 3px;
+}
+
+.displayNone {
+    display: none;
+}
+
+.saved {
+    color: green;
+    position: relative;
+    right: -100px;
+    font-size: 0.8em;
+    /*animation: saving 1s ease-in-out;*/
+    opacity: 0;
+}
+
+@keyframes saving {
+    0% {
+        top: 10px;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: -10px;
+        opacity: 0;
+    }
+}
+.tbl tr {height:30px}
+.tbl td {font-size: 13px;min-width: 150px}
+.my-menu.my-profile {height:auto !important}
+.my-menu.my-profile p{margin-bottom:5px}
+ul.cl-map {list-style:none; padding-left:0; margin-top:10px}
+ul.cl-map li {display:inline; margin-right:15px; font-size:16px; font-family:'MyriadPro-Bold' !important;}
+ul.cl-map li.gry {color:#a7abac;}
+ul.cl-map li.blck {color:#222;}
+ul.cl-map li.blu {color:#1a9bc2;}
+
+#srch .search-bar {border: solid thin #000 !important;}
+#srch .icon input[type="text"]{font-size:18px !important;color:#000 !important;	border-right:solid 1px #000 !important;}
+#srch .icon input[type="submit"] { color: #000; background: url(../img/find1.png) no-repeat; background-position:5px center;}
+#srch .icon input::-moz-placeholder {color:#000 !important}
+.search-bar {
+    border-radius: 10px;
+    border: solid thin #fff;
+    max-width:280px;
+
+}
+.icon{
+
+
+}
+.icon input[type="text"] {
+    border: medium none;
+    height: 40px;
+    padding: 5px 14px;
+    width: 80%;
+    float:left;
+    font-size:18px !important;
+    color:#fff !important;
+    border-right:solid 1px #fff;
+    background-color:transparent;
+    font-family:'MyriadPro-Light' !important;
+}
+.icon input[type="submit"] {
+
+    text-indent: -9999px;
+    width:20%;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 40px;
+    padding: 5px 10px 5px 15px;
+
+
+}
+
+
+
+.team-bg {background:url(../img/team.jpg); background-repeat:no-repeat; background-position:center center; height:440px; width:100%}
+
+
+#ul-data {
+    position: relative;
+    top: -60px;
+    display: inline-block;
+    margin-left: 10%;
+    width: 30%;
+    margin-right: 6%;
+}
+#chart-container { display: inline-block; width: 50%; }
+#ul-data li { font-size: 32px; }
+#chart-container {
+    position: relative;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    height: 420px;
+    width: calc(100% - 24px);
+    border: 2px dashed #aaa;
+    border-radius: 5px;
+    overflow: auto;
+    text-align: center;
+}
+.orgchrt {margin-bottom:75px; margin-top:25px; min-height:450px;}
+.orgchrt h3 {color:#1a9bc2; font-size:17px; font-family:'MyriadPro-Bold' !important; margin-bottom:0; margin-top:10px}
+.orgchrt .tm-mbr {border-radius:50%; text-align:center; background:#1a9bc2; height:110px; width:110px; padding-top:28px; color:#fff; margin:0 auto 20px}
+.orgchrt .tm-mbr:after {content:""; width:3px; height:50px; display:block; margin:25px auto 0; background:#999}
+.mbr-box1 {width:50%; float:left}
+.mbr-box1 {width:50%; float:right}
+.orgchrt .tm-mbr1 {border-radius:50%; position:relative; float:right; z-index:999; text-align:center; background:#1a9bc2; height:110px; width:110px; padding-top:28px; color:#fff; margin:50px auto}
+.orgchrt .tm-mbr1:before{content:""; width:175px; height:23px; background:url(../img/tm-mbr1.png); z-index:99; top:-22px; left:-122px; position:absolute }
+.orgchrt .tm-mbr2 {border-radius:50%; float:left; position:relative; z-index:999;  text-align:center; background:#1a9bc2; height:110px; width:110px; padding-top:28px; color:#fff; margin:50px auto}
+.orgchrt .tm-mbr2:before {content:""; width:175px; height:23px; background:url(../img/tm-mbr2.png); z-index:99; top:-22px; left:-110px; position:absolute }
+.orgchrt .qulifd {background:#3a3a3a !important; position:relative; border-radius:50%; z-index:999; float:left;  text-align:center;  height:110px; width:110px; padding-top:28px; color:#fff; margin:50px auto}
+.orgchrt .qulifd:before {content:""; width:175px; height:23px; background:url(../img/tm-mbr2.png); z-index:99; top:-22px; left:53px; position:absolute }
+.orgchrt .qulifd h4, .orgchrt .qulifd h4 a, .orgchrt .tm-mbr1 h4, .orgchrt .tm-mbr1 h4 a  {font-size:20px;  font-family:'MyriadPro-Bold' !important; margin-top:15px; color:#fff}
+.orgchrt .qulifd i , .orgchrt .tm-mbr2 i, .orgchrt .tm-mbr1 i  {display:block}
+/*.orgchrt .collapse.in:after {content:""; width:3px; height:30px; display:inline-block; margin:15px auto 0; background:#999}
+*/.orgchrt .mbr-sub1 {background:#a7abac !important; position:relative; border-radius:50%; z-index:999; float:right;  text-align:center;  height:50px; width:50px; padding-top:5px; color:#fff; margin:53px auto}
+.orgchrt .mbr-sub1:before {content:""; width:34px; height:50px; background:url(../img/submbr1.png); z-index:99; top:-38px; left:-8px; position:absolute}
+.orgchrt .mbr-sub2 i {color:#a7abac !important;}
+.orgchrt .mbr-sub2 {background:#fff !important; box-shadow:0 0 0px 2px #a7abac; position:relative; border-radius:50%; z-index:999; float:left;  text-align:center;  height:50px; width:50px; padding-top:4px; color:#a7abac !important; margin:53px auto}
+.orgchrt .mbr-sub2:before {content:""; width:34px; height:18px; background:url(../img/submbr2.png); z-index:99; top:-18px; left:25px; position:absolute}
+.orgchrt .mbr-sub1 h4, .orgchrt .mbr-sub2 h4 {font-size:12px;  font-family:'MyriadPro-Bold' !important; margin-top:12px; color:#fff}
+.abt-vid {background:#fff; box-shadow:5px 4px 0px 0px #5d5d5d; width:90%; padding:15px}
+.orang-bg {
+    background:#e56140;
+    padding:40px 25px;
+    margin-top:50px;
+    margin-bottom:50px
+}
+.blue-bg {
+    background:#248bb6;
+    padding:40px 25px;
+    margin-top:50px;
+    margin-bottom:50px
+}
+
+.padd-all-30 {padding:30px}
+
+.owl-item .item {height:auto !important}
+.featured {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.featured h2 {
+    font-family: 'MyriadPro-Bold';
+    font-size: 30px;
+    text-align: center;
+    margin-bottom:35px;
+}
+.section-5 {
+    padding: 60px 0 60px;
+    margin-top:-30px;
+}
+
+.light-gray {
+    background-color: #F1F1F1;
+}
+
+.logregform .feildcont {
+
+    width: 100%;
+    padding: 0px 2px 10px 10px;
+    text-align: left;
+}
+.feildcont form .form-group {
+    position: relative;
+    margin-bottom: .75em;
+}
+.feildcont .form-group .form-control {
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    height: auto;
+    border-radius:0px;
+    box-shadow: none;
+}
+.logregform .feildcont label {
+    /*float: left;*/
+    /*width: 100%;*/
+    font-weight: normal;
+    /*color: #727272;*/
+    font-size:13px;
+    margin-bottom:3px;
+}
+.logregform .feildcont label em {
+    color: #ff7a59;
+    font-style: normal;
+}
+.logregform .feildcont input {
+    float: left;
+    width: 100%;
+    padding: 5px 12px;
+    /*border: 1px solid #e3e3e3;
+    margin-bottom: 10px;*/
+    border-radius:2px;
+}
+
+.logregform .feildcont .fbut {
+
+    background: #ff7a59;
+    padding: 10px ;
+    border: none;
+    width:100%;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    border-radius:2px;
+}
+.logregform .feildcont .fbut:hover {
+    background: #E06045;
+}
+
+.effect-9{border: 1px solid #aaa !important; padding: 7px 14px 9px; transition: 0.4s;}
+.effect-9 ~ .focus-border:before,
+.effect-9 ~ .focus-border:after{content: ""; position: absolute; top: 0; right: 0; width: 0; height: 2px; background-color: #ff7a59; transition: 0.2s; transition-delay: 0.2s;}
+.effect-9 ~ .focus-border:after{top: auto; bottom: 0; right: auto; left: 0; transition-delay: 0.6s;}
+.effect-9 ~ .focus-border i:before,
+.effect-9 ~ .focus-border i:after{content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #ff7a59; transition: 0.2s;}
+.effect-9 ~ .focus-border i:after{left: auto; right: 0; top: auto; bottom: 0; transition-delay: 0.4s;}
+.effect-9:focus ~ .focus-border:before,
+.effect-9:focus ~ .focus-border:after{width: 100%; transition: 0.2s; transition-delay: 0.6s;}
+.effect-9:focus ~ .focus-border:after{transition-delay: 0.2s;}
+.effect-9:focus ~ .focus-border i:before,
+.effect-9:focus ~ .focus-border i:after{height: 100%; transition: 0.2s;}
+.effect-9:focus ~ .focus-border i:after{transition-delay: 0.4s;}
+
+.section-title {
+    margin-bottom: 18px;
+    padding-bottom: 6px;
+}
+
+.section-title {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    position: relative;
+    font-family: 'MyriadPro-Bold';
+    margin-right:20px;
+    color:#454545;
+}
+
+.section-title span {
+    background: #ff7a59 none repeat scroll 0 0;
+    bottom: -1px;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 80px;
+}
+.nwsection-title span {
+    background: #009788 none repeat scroll 0 0;
+    bottom: -1px;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 80px;
+}
+.section-title span {
+    bottom: 0;
+    height: 2px;
+    width: 80px;
+}
+.myp {
+    line-height:1.5;
+    text-align:justify;
+    padding-right:20px;
+    margin-top:40px;
+}
+.padding-all-24 {
+
+    padding:24px;
+}
+.whity {background:#fff}
+.no-pd-b {width:100%; border:none; border-radius:0; padding-top:10px; padding-bottom:5px; color:#000}
+.modal-body h2.rd i {background:#e74c3c; color:white; border-radius:50%; padding:6px 10px; box-shadow:0px 4px 1px -1px #999; -webkit-box-shadow:0px 4px 1px -1px #999; -moz-box-shadow:0px 4px 1px -1px #999; }
+.modal-body h5.rd {margin-top:25px; margin-bottom:25px; line-height:1.5; font-size:22px}
+/*
+
+.orgchrt .tm-mbr1 {border-radius:50%; position:relative; float:right; z-index:999; text-align:center; background:#1a9bc2; height:110px; width:110px; padding-top:28px; color:#fff; margin:50px auto}
+.orgchrt .tm-mbr1:before {content:""; width:164px; height:23px; background:url(../img/tm-mbr1.png); z-index:99; top:-22px; left:-110px; position:absolute }
+.orgchrt .tm-mbr2 {border-radius:50%; float:left; position:relative; z-index:999;  text-align:center; background:#1a9bc2; height:110px; width:110px; padding-top:28px; color:#fff; margin:50px auto}
+.orgchrt .tm-mbr2:before {content:""; width:164px; height:23px; background:url(../img/tm-mbr2.png); z-index:99; top:-22px; left:-110px; position:absolute }
+.orgchrt .qulifd {background:#3a3a3a !important; position:relative; border-radius:50%; z-index:999; float:left;  text-align:center;  height:110px; width:110px; padding-top:28px; color:#fff; margin:50px auto}
+.orgchrt .qulifd:before {content:""; width:164px; height:23px; background:url(../img/tm-mbr2.png); z-index:99; top:-22px; left:55px; position:absolute }
+.orgchrt .qulifd h4, .orgchrt .qulifd h4 a, .orgchrt .tm-mbr1 h4, .orgchrt .tm-mbr1 h4 a  {font-size:20px;  font-family:'MyriadPro-Bold' !important; margin-top:15px; color:#fff}
+.orgchrt .qulifd i , .orgchrt .tm-mbr2 i, .orgchrt .tm-mbr1 i  {display:block}
+
+.orgchrt .mbr-sub1 {background:#a7abac !important; position:relative; border-radius:50%; z-index:999; float:left;  text-align:center;  height:90px; width:90px; padding-top:28px; color:#fff; margin:50px auto}
+*/
+.close.back {background:url(../img/back.png) !important; background-color:transparent !important; border-radius:0 !important;  background-repeat:no-repeat; width:110px; height:40px; position:absolute;top:20px !important; right:20px !important; color:#6f6f6f;}
+.back span {color:#6f6f6f; margin-left:10px;  vertical-align:text-bottom}
+@media (min-width: 992px){
+
+    .no-pd {
+        padding: 0 !important;
+
+    }
+
+    .details {
+        padding-left: 30px !important;
+    }
+    .details .nwbtn1 {width: 40% !important;}
+    .nwbtn1 {
+        width: 100%;
+        padding: 10px !important;
+        font-size: 16px !important;
+        background:#f46344;
+        font-size:22px !important
+    }
+}
+
+
+
+
+
+/*==========Responsive=============*/
+@media (max-width: 360px){
+    .wallet-box .stats h4 { color: #f078db; font-size: 17px;}
+    #squarespaceModal-3 .panel-body {right:-10px;  }
+    #squarespaceModal-3 .modal-body .event { height:300px; overflow-y:scroll; overflow-x:hidden}
+    #squarespaceModal-3 .close {right:-5px; top:45px}
+    #squarespaceModal-2 .panel-body {left:0}
+    #squarespaceModal-1 .panel-body {left:10px}
+    #squarespaceModal-2 .close {right:6px}
+    #squarespaceModal-6 {z-index:9999999}
+    #squarespaceModal-6 .modal-body .my-menu {padding:0}
+    .myp {text-align:left}
+    .logo img {width:175px}
+
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    .logo {z-index:99; left:10px}
+    .panel-body {width:100%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {bottom:10px;text-align:left;position:absolute; left:20px;color:#000; width:90%; height:130px;z-index:9999;}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:14px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .filter-container input[type=text] {width:77%; padding:5px 10px 5px 10px; margin-right:1%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:20%; font-size:12px; float:right}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1%;  margin-left: 1%; width:28%}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:100%; margin:15px 0px 15px 2px !important;}
+    .tab-content {padding:45px 0px 15px}
+    .tab-content > .active {display: block; max-height: 360px; overflow-y: scroll; overflow-x: hidden;}
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-7px; top:47px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:200px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px; height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:12px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 100%;   left: 5%;}
+    ul.mytabs {margin-bottom:15px}
+    .mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:360px; overflow-y:scroll}
+    .modal-body .my-menu {width:100%; height:auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 10px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    .mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    .wrapper.mymodal ul.tabs li {display:block}
+    .wrapper.mymodal .btn-group { position: absolute; top: -85px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px; height: 200px;  overflow-x: hidden;   overflow-y: scroll;}
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:220px !important; overflow-y:scroll; overflow-x:hidden}
+
+}
+
+@media (max-width: 400px) and (min-width:361px) {
+
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    #squarespaceModal-6 {z-index:9999999}
+    .search-bar {max-width:100% !important}
+    .logo {z-index:99; left:10px}
+    .panel-body {width:100%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute; left:20px;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:14px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .filter-container input[type=text] {width:77%; padding:5px 10px 5px 10px; margin-right:1%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:20%; font-size:12px; float:right}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1%;  margin-left: 1%; width:28.2%}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:100%; margin:15px 0px 15px 2px !important;}
+    .tab-content {padding:45px 0px 15px}
+    .tab-content > .active {display: block; max-height: 360px; overflow-y: scroll; overflow-x: hidden;}
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-7px; top:47px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:200px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 100%;   left: 3.2%;}
+    ul.mytabs {margin-bottom:15px}
+    .mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:360px; overflow-y:scroll}
+    .modal-body .my-menu {width:100%; height:auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    .mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    .wrapper.mymodal ul.tabs li {display:block}
+    .wrapper.mymodal .btn-group { position: absolute; top: -85px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px; height: 200px;  overflow-x: hidden;   overflow-y: scroll;}
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:220px !important; overflow-y:scroll; overflow-x:hidden}
+}
+
+@media (max-width: 480px) and (min-width:401px) and (orientation: portrait) {
+
+    .event img { margin-bottom: 20px;  width: 100%;}
+    .search-bar {max-width:100% !important}
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    #squarespaceModal-6 {z-index:9999999}
+    .element img {width:100%}
+    .element {height:auto}
+    .logo {z-index:99; left:10px}
+    .panel-body {width:100%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    #primary-nav.mobile li a {
+        padding: 2%;
+    }
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute; left:20px;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:14px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .filter-container input[type=text] {width:77.9%; padding:5px 10px 5px 10px; margin-right:1%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:20%; font-size:12px; float:right}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1%;  margin-left: 1%; width:29%}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:100%; margin:15px 0px 15px 2px !important;}
+    .tab-content {padding:45px 0px 15px}
+    .tab-content > .active {display: block; max-height: 360px; overflow-y: scroll; overflow-x: hidden;}
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-7px; top:47px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:200px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px; height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 100%;   left: 2.5%;}
+    ul.mytabs {margin-bottom:15px}
+    .mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:360px; overflow-y:scroll}
+    .modal-body .my-menu {width:100%; height:auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    .mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    .wrapper.mymodal ul.tabs li {display:block}
+    .wrapper.mymodal .btn-group { position: absolute; top: -85px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px; height: 200px;  overflow-x: hidden;   overflow-y: scroll;}
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:220px !important; overflow-y:scroll; overflow-x:hidden}
+}
+
+@media (max-width: 550px) and (min-width: 481px) {
+    #squarespaceModal-6 {z-index:99999999999}
+    .search-bar {margin:0 auto}
+    .orgchrt .tm-mbr1 {margin-right:20%}
+    .orgchrt .qulifd {margin-left:12.5%}
+    #primary-nav.mobile li a { padding: 2%;}
+    .menu-img img{margin:0 auto}
+    #register-newsletter {padding-left:0px;}
+    .myform {padding-left:21px}
+    .event img {width:100%}
+    .modal-body .event { padding: 0 15px 10px; height: 300px; overflow-y: scroll; overflow-x: hidden;}
+    .prc1 {width:50%}
+    .product-details .item.slide {height:auto !important}
+
+
+
+
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    .logo {z-index:99; left:10px}
+    .panel-body {width:96%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute; left:20px;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:16px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .filter-container input[type=text] {width:75%; padding:5px 10px 5px 10px; margin-right:1%}
+    .nw-filter input {width:73% !important}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:115px; font-size:15px; float:right}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1%;  margin-left: 1.35%; width:27%}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:45%; margin:15px 8px 15px 16px !important}
+    .tab-content {padding:45px 0px 15px}
+    .tab-content > .active {display: block; max-height: 360px; overflow-y: scroll; overflow-x: hidden;}
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-3px; top:32px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:250px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 98%;   left: 1%;}
+    ul.mytabs {margin-bottom:15px}
+    /*.mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}*/
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:300px; overflow-y:scroll}
+    .modal-body .my-menu {width:70%; height:auto; margin:0 auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    /*.mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}*/
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    /*.wrapper.mymodal ul.tabs li {display:block}*/
+    .wrapper.mymodal .btn-group { position: absolute; top: -30px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px; height: 210px;  overflow-x: hidden;   overflow-y: scroll;}
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:220px !important; overflow-y:scroll; overflow-x:hidden}
+
+}
+
+@media (max-width: 620px) and (min-width:551px) and (orientation:portrait) {
+    #squarespaceModal-6 {z-index:99999999999}
+    .search-bar {margin:0 auto}
+    .orgchrt .tm-mbr1 {margin-right:27%}
+    .orgchrt .qulifd {margin-left:15.5%}
+    #primary-nav.mobile li a { padding: 2%;}
+    .menu-img img{margin:0 auto}
+    #register-newsletter {padding-left:0px;}
+    .myform {padding-left:21px}
+    .event img {width:100%}
+    .modal-body .event { padding: 0 15px 10px; height: 300px; overflow-y: scroll; overflow-x: hidden;}
+    .prc1 {width:50%}
+    .product-details .item.slide {height:auto !important}
+    .my-menu ul li, .my-menu ul {    margin-bottom: 0px;}
+    .menu-img img {width:135px}
+    .my-menu.my-profile:first-child {height:354px !important; overflow-x:hidden; overflow-y:scroll; width:67%}
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:230px !important; overflow-y:scroll; overflow-x:hidden}
+
+
+
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    .logo {z-index:99; left:10px}
+    .panel-body {width:96%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute; left:20px;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:16px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .filter-container input[type=text] {width:78%; padding:5px 10px 5px 10px; margin-right:1%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:110px; font-size:14px; float:right}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input { margin-right: 1.4%;  margin-left: 1%;  width: 29%;}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:45%; margin:15px 10px 15px 17px !important}
+    .tab-content {padding:45px 0px 15px}
+    .tab-content > .active {display: block; max-height: 220px; overflow-y: scroll; overflow-x: hidden;}
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-3px; top:32px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:280px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 98%;   left: 1%;}
+    ul.mytabs {margin-bottom:15px}
+    /*.mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}*/
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:200px; overflow-y:scroll}
+    .modal-body .my-menu {width:70%; height:auto; margin:0 auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    /*.mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}*/
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    /*.wrapper.mymodal ul.tabs li {display:block}*/
+    .wrapper.mymodal .btn-group { position: absolute; top: -30px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px; height: 220px;  overflow-x: hidden;   overflow-y: scroll;}
+}
+
+@media (max-width: 690px) and (min-width:641px) and (orientation:portrait) {
+    #squarespaceModal-6 {z-index:99999999999}
+    .search-bar {margin:0 auto}
+    .orgchrt .tm-mbr1 {margin-right:27%}
+    .orgchrt .qulifd {margin-left:15.5%}
+    #primary-nav.mobile li a { padding: 2%;}
+    .menu-img img{margin:0 auto}
+    #register-newsletter {padding-left:15px;}
+    .myform {padding-left:21px}
+    .event img {width:100%}
+    .modal-body .event { padding: 0 15px 10px; height: 300px; overflow-y: scroll; overflow-x: hidden;}
+    .prc1 {width:50%}
+    .product-details .item.slide {height:auto !important}
+    .my-menu ul li, .my-menu ul {    margin-bottom: 0px;}
+    .menu-img img {width:135px}
+    .my-menu.my-profile:first-child {height:354px !important; overflow-x:hidden; overflow-y:scroll; width:67%}
+
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:250px !important; overflow-y:scroll; overflow-x:hidden}
+
+
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    .logo {z-index:99; left:10px}
+    .panel-body {width:96%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute; left:20px;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:16px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .filter-container input[type=text] {width:77%; padding:5px 10px 5px 10px; margin-right:1%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:20%; font-size:12px}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input { margin-right: 1.4%;  margin-left: 1%;  width: 29%;}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:46%; margin:15px 11px 15px 12px !important}
+    .tab-content {padding:45px 0px 15px}
+    .tab-content > .active {display: block; max-height: 220px; overflow-y: scroll; overflow-x: hidden;}
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-3px; top:32px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:280px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 98%;   left: 1%;}
+    ul.mytabs {margin-bottom:15px}
+    /*.mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}*/
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:200px; overflow-y:scroll}
+    .modal-body .my-menu {width:70%; height:auto; margin:0 auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    /*.mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}*/
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    /*.wrapper.mymodal ul.tabs li {display:block}*/
+    .wrapper.mymodal .btn-group { position: absolute; top: -30px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px; height: 220px;  overflow-x: hidden;   overflow-y: scroll;}
+}
+
+@media (max-width: 767px) and (min-width:691px) {
+    #squarespaceModal-6 {z-index:99999999999}
+    .search-bar {margin:0 auto}
+    .orgchrt .tm-mbr1 {margin-right:27%}
+    .orgchrt .qulifd {margin-left:15.5%}
+    #primary-nav.mobile li a { padding: 2%;}
+    .menu-img img{margin:0 auto}
+    #register-newsletter {padding-left:15px;}
+    .myform {padding-left:21px}
+    .event img {width:100%}
+    .modal-body .event { padding: 0 15px 10px; height: 300px; overflow-y: scroll; overflow-x: hidden;}
+    .prc1 {width:50%}
+    .product-details .item.slide {height:auto !important}
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:250px !important; overflow-y:scroll; overflow-x:hidden}
+
+
+
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    .logo {z-index:99; left:10px}
+    .panel-body {width:96%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute; left:20px;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:16px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .filter-container input[type=text] {width:77%; padding:5px 10px 5px 10px; margin-right:1%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:20%; font-size:12px}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1.5%;  margin-left: 1.29%; width:30%}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:46%; margin:15px 11px 15px 12px !important}
+    .tab-content {padding:45px 0px 15px}
+    .tab-content > .active {display: block; max-height: 360px; overflow-y: scroll; overflow-x: hidden;}
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-3px; top:32px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:250px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 98%;   left: 1%;}
+    ul.mytabs {margin-bottom:15px}
+    /*.mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}*/
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:300px; overflow-y:scroll}
+    .modal-body .my-menu {width:70%; height:auto; margin:0 auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    /*.mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}*/
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    /*.wrapper.mymodal ul.tabs li {display:block}*/
+    .wrapper.mymodal .btn-group { position: absolute; top: -30px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px; height: 220px;  overflow-x: hidden;   overflow-y: scroll;}
+}
+
+@media (max-width: 991px) and (min-width:768px) {
+    #squarespaceModal-6 {z-index:99999999999}
+    .search-bar {margin:0 auto}
+    .orgchrt .tm-mbr1 {margin-right:27%}
+    .orgchrt .qulifd {margin-left:15.5%}
+    #primary-nav.mobile li a { padding: 2%;}
+    .menu-img img{margin:0 auto}
+    #register-newsletter {padding-left:15px;}
+    .myform {padding-left:21px}
+    .event img {width:100%}
+    .modal-body .event { padding: 0 15px 10px; height: 300px; overflow-y: scroll; overflow-x: hidden;}
+    /*.prc1 {width:50%}*/
+    .product-details .item.slide {height:auto !important}
+    /*.dropdown.menu {padding:15px}*/
+    #primary-nav li a {font-size:14px}
+
+
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    #site-wrapper .logo {z-index:99; left:30px !important}
+    .panel-body {width:96%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute; left:20px;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:16px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .filter-container input[type=text] {width:77%; padding:5px 10px 5px 10px; margin-right:1%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:20%; font-size:12px}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1.5%;  margin-left: 1.29%; width:25%}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:45%; margin:15px 13px 15px 14px !important}
+    .tab-content {padding:45px 0px 15px}
+    .tab-content > .active {display: block; max-height: 360px; overflow-y: scroll; overflow-x: hidden;}
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-3px; top:32px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:300px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 98%;   left: 1%;}
+    ul.mytabs {margin-bottom:15px}
+    /*.mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}*/
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:300px; overflow-y:scroll}
+    .modal-body .my-menu {width:70%; height:auto; margin:0 auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    /*.mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}*/
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    /*.wrapper.mymodal ul.tabs li {display:block}*/
+    .wrapper.mymodal .btn-group { position: absolute; top: -30px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px;}
+    .up-form {    padding: 30px 10px; height: 300px;  overflow-x: hidden;   overflow-y: scroll;}
+}
+
+@media (max-width: 1024px) and (min-width:992px){
+    .myform input {width:24% !important}
+    .types label, .categs label {font-size:15px}
+    .side-bar h2 {font-size:22px}
+    .event-title {width:50%}
+    .wallet-box .stats {width:320px; text-align:center}
+    .logo {
+        position: absolute;
+        top: 60px;
+        left: 30px;
+        z-index: 99999;
+    }
+    .close {top:55px; right:-5px}
+    .modal-body .event {
+        padding: 0 15px 10px;
+        height: 500px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 1025px) {
+    .myform input {width:26.5%}
+    .element {width:210px; height:380px}
+    .close {top:55px; right:-5px}
+    .modal-body .event {
+        padding: 0 15px 10px;
+        height: 500px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .lft {padding-left:0 !important; padding-right:5px}
+    .rght {padding-right:0 !important; padding-left:5px}
+    .rght1 {padding-left:5px !important; padding-right:5px !important;}
+    #squarespaceModal-8 .modal-dialog {width:70%}
+    #squarespaceModal-2  .modal-dialog, #squarespaceModal-2  .panel-body, #squarespaceModal-3  .modal-dialog, #squarespaceModal-3  .panel-body {width:600px}
+
+
+
+}
+
+
+
+
+/*
+@media (max-width: 600px) and (min-width: 568px) and (orientation: landscape) {
+	.nw-filter input {width:77% !important}
+	#register-newsletter {padding-left:0}
+	.my-menu ul li, .my-menu ul {    margin-bottom: 0px;}
+	.menu-img img {width:100px}
+	.my-menu.my-profile:first-child {height:304px !important; overflow-x:hidden; overflow-y:scroll; width:67%}
+	.filter-container .btn, .myform .btn { width: 108px; font-size: 14px; float: right;}
+	#filter .myform input {width:28%}
+	.element {width: 45.2%; margin: 15px 11px 15px 14px !important;}
+	.mytabs li {
+    width: auto;
+    margin-right: 20px;
+}
+	.tab-content > .active {
+    display: block;
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+}
+
+*/
+@media (width:800px) {
+    .logo {z-index:99; left:30px !important }
+
+}
+@media (max-width: 1280px) and (min-width:1100px) and (orientation: landscape) {
+    #squarespaceModal-2  .modal-dialog, #squarespaceModal-2  .panel-body, #squarespaceModal-3  .modal-dialog, #squarespaceModal-3  .panel-body {width:600px}
+    .logo {
+        position: absolute;
+        top: 60px;
+        left: 60px !important;
+        z-index: 99999;
+    }
+    .element {
+        width: 220px;
+        height: 380px;
+    }
+}
+@media (max-width: 980px) and (min-width:900px) and (orientation: landscape) {
+    #squarespaceModal-2  .modal-dialog, #squarespaceModal-2  .panel-body, #squarespaceModal-3  .modal-dialog, #squarespaceModal-3  .panel-body {width:600px}
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:280px !important; overflow-y:scroll; overflow-x:hidden}
+    .menu-img img {width:140px}
+    .my-menu.my-profile:first-child {height:380px !important; overflow-x:hidden; overflow-y:scroll; width:67%}
+    .tab-content > .active {display: block; max-height: 340px; overflow-y: scroll; overflow-x: hidden;}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:15%}
+    .element {
+        width: 45%;
+        margin: 15px 13px 15px 17px !important;
+    }
+    .logo {
+        position: absolute;
+        top: 60px;
+        left: 110px !important;
+        z-index: 99999;
+    }
+    .slide1>.caption {left:120px; width:60%}
+    .aslider-next .fa {margin-right:15px}
+
+    .modal-body .event {
+        padding: 0 15px 10px;
+        height: 500px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    .logo {z-index:99; left:60px }
+    .panel-body {width:96%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute;	color:#000; width:60%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:16px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .filter-container input[type=text] {width:77%; padding:5px 10px 5px 10px; margin-right:1%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:20%; font-size:12px}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1.5%;  margin-left: 1.29%; width:25%}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:45%; margin:15px 13px 15px 14px !important}
+    .tab-content {padding:45px 0px 15px}
+    .tab-content > .active {display: block; max-height: 360px; overflow-y: scroll; overflow-x: hidden;}
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-3px; top:32px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:300px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 98%;   left: 1%;}
+    ul.mytabs {margin-bottom:15px}
+    /*.mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}*/
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:300px; overflow-y:scroll}
+    .modal-body .my-menu {width:70%; height:auto; margin:0 auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    /*.mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}*/
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    /*.wrapper.mymodal ul.tabs li {display:block}*/
+    .wrapper.mymodal .btn-group { position: absolute; top: -30px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px;}
+    .mytabs li {  width: auto;   margin-right: 18px;}
+}
+@media (max-width: 890px) and (min-width:800px) and (orientation: landscape) {
+    #squarespaceModal-2  .modal-dialog, #squarespaceModal-2  .panel-body, #squarespaceModal-3  .modal-dialog, #squarespaceModal-3  .panel-body {width:600px}
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:280px !important; overflow-y:scroll; overflow-x:hidden}
+    .menu-img img {width:140px; margin:0 auto}
+    .my-menu.my-profile:first-child {height:380px !important; overflow-x:hidden; overflow-y:scroll; width:67%}
+    .tab-content > .active {display: block; max-height: 340px; overflow-y: scroll; overflow-x: hidden;}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:15%}
+    .element {
+        width: 45%;
+        margin: 15px 13px 15px 15px !important;
+    }
+    /*	.logo {
+        position: absolute;
+        top: 60px;
+        left: 60px;
+        z-index: 99999;
+    }*/
+    .slide1>.caption {left:70px; width:60% !important}
+    .aslider-next .fa {margin-right:15px}
+    .modal-body .event {
+        padding: 0 15px 10px;
+        height: 400px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    .logo {z-index:99; left:60px }
+    .panel-body {width:96%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:16px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .filter-container input[type=text] {width:77%; padding:5px 10px 5px 10px; margin-right:1%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:20%; font-size:12px}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1.5%;  margin-left: 1.29%; width:25%}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:45%; margin:15px 13px 15px 14px !important}
+    .tab-content {padding:45px 0px 15px}
+    .tab-content > .active {display: block; max-height: 360px; overflow-y: scroll; overflow-x: hidden;}
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-3px; top:32px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:300px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 98%;   left: 1%;}
+    ul.mytabs {margin-bottom:15px}
+    /*.mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}*/
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:300px; overflow-y:scroll}
+    .modal-body .my-menu {width:70%; height:auto; margin:0 auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    /*.mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}*/
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    /*.wrapper.mymodal ul.tabs li {display:block}*/
+    .wrapper.mymodal .btn-group { position: absolute; top: -30px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px;}
+    .mytabs li {  width: auto;   margin-right: 18px;}
+    .orgchrt .tm-mbr1 {margin-right:31.5%}
+    .orgchrt .qulifd {margin-left:17.5%}
+
+
+}
+@media (max-width: 767px) and (min-width:701px) and (orientation: landscape) {
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:250px !important; overflow-y:scroll; overflow-x:hidden}
+    #squarespaceModal-6 {z-index:99999999999}
+    .search-bar {margin:0 auto}
+    .orgchrt .tm-mbr1 {margin-right:31.5%}
+    .orgchrt .qulifd {margin-left:17.5%}
+    #primary-nav.mobile li a { padding: 2%;}
+    .menu-img img{margin:0 auto}
+    #register-newsletter {padding-left:0px;}
+    .myform {padding-left:21px}
+    .event img {width:100%}
+    .modal-body .event { padding: 0 15px 10px; height: 300px; overflow-y: scroll; overflow-x: hidden;}
+    .prc1 {width:50%}
+    .product-details .item.slide {height:auto !important}
+
+
+
+
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    .logo {z-index:99; left:10px}
+    .panel-body {width:96%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute; left:20px;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:16px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .filter-container input[type=text] {width:78%; padding:5px 10px 5px 10px; margin-right:1%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:135px; float:right; font-size:14px}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1.5%;  margin-left: 0.4%; width:30%}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:46.5%; margin:15px 8px 15px 16px !important}
+    .tab-content {padding:45px 0px 15px}
+    .tab-content > .active {display: block; max-height: 240px; overflow-y: scroll; overflow-x: hidden;}
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-3px; top:32px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:250px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 98%;   left: 1%;}
+    ul.mytabs {margin-bottom:15px}
+    /*.mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}*/
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:300px; overflow-y:scroll}
+    .modal-body .my-menu {width:70%; height:auto; margin:0 auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    /*.mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}*/
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    /*.wrapper.mymodal ul.tabs li {display:block}*/
+    .wrapper.mymodal .btn-group { position: absolute; top: -30px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px; height: 250px;  overflow-x: hidden;   overflow-y: scroll;}
+
+    .menu-img img {width:100px}
+    .my-menu.my-profile:first-child {height:354px !important; overflow-x:hidden; overflow-y:scroll; width:67%}
+}
+
+
+@media (max-width: 700px) and (min-width: 651px) and (orientation: landscape) {
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:250px !important; overflow-y:scroll; overflow-x:hidden}
+    .nw-filter input {width:77.5% !important}
+    #register-newsletter {padding-left:0  !important}
+    .my-menu ul li, .my-menu ul {    margin-bottom: 0px;}
+    .menu-img img {width:100px}
+    .my-menu.my-profile:first-child {height:304px !important; overflow-x:hidden; overflow-y:scroll; width:67%}
+    .filter-container .btn, .myform .btn { width: 120px; font-size: 14px; float: right;}
+    /*#filter .myform input {width:28.4%}*/
+    .element {width: 45.2%; margin: 15px 11px 15px 14px !important;}
+    .mytabs li {
+        width: auto;
+        margin-right: 20px;
+    }
+    .tab-content > .active {
+        display: block;
+        max-height: 200px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    #squarespaceModal-6 {z-index:99999999999}
+    .search-bar {margin:0 auto}
+    .orgchrt .tm-mbr1 {margin-right:30%}
+    .orgchrt .qulifd {margin-left:16.5%}
+    #primary-nav.mobile li a { padding: 2%;}
+    .menu-img img{margin:0 auto}
+    #register-newsletter {padding-left:0px;}
+    .myform {padding-left:21px}
+    .event img {width:100%}
+    .modal-body .event { padding: 0 15px 10px; height: 300px; overflow-y: scroll; overflow-x: hidden;}
+    .prc1 {width:50%}
+    .product-details .item.slide {height:auto !important}
+
+
+
+
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    .logo {z-index:99; left:10px}
+    .panel-body {width:96%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute; left:20px;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:16px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .nw-filter input {width:78% !important}
+    .filter-container input[type=text] {width:78%; padding:5px 10px 5px 10px; margin-right:1.2%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:115px; font-size:15px; float:right}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1%;  margin-left: 1.2%; width:29.4%}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    /*.element {width:45%; margin:15px 10px 15px 17px !important} */
+    .tab-content {padding:45px 0px 15px}
+    /*.tab-content > .active {display: block; max-height: 360px; overflow-y: scroll; overflow-x: hidden;}*/
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-3px; top:32px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:250px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 98%;   left: 1%;}
+    ul.mytabs {margin-bottom:15px}
+    /*.mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}*/
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:300px; overflow-y:scroll}
+    .modal-body .my-menu {width:70%; height:auto; margin:0 auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    /*.mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}*/
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    /*.wrapper.mymodal ul.tabs li {display:block}*/
+    .wrapper.mymodal .btn-group { position: absolute; top: -30px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px; height: 220px;  overflow-x: hidden;   overflow-y: scroll;}
+
+}
+
+@media (max-width: 650px) and (min-width: 601px) and (orientation: landscape) {
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:250px !important; overflow-y:scroll; overflow-x:hidden}
+    .nw-filter input {width:77% !important}
+    #register-newsletter {padding-left:0  !important}
+    .my-menu ul li, .my-menu ul {    margin-bottom: 0px;}
+    .menu-img img {width:100px}
+    .my-menu.my-profile:first-child {height:304px !important; overflow-x:hidden; overflow-y:scroll; width:67%}
+    .filter-container .btn, .myform .btn { width: 120px; font-size: 14px; float: right;}
+    /*	#filter .myform input {width:28.4%}
+    */	.element {width: 45.2%; margin: 15px 10px 15px 17px !important;}
+    .mytabs li {
+        width: auto;
+        margin-right: 20px;
+    }
+    .tab-content > .active {
+        display: block;
+        max-height: 200px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+
+    #squarespaceModal-6 {z-index:99999999999}
+    .search-bar {margin:0 auto}
+    .orgchrt .tm-mbr1 {margin-right:20%}
+    .orgchrt .qulifd {margin-left:12.5%}
+    #primary-nav.mobile li a { padding: 2%;}
+    .menu-img img{margin:0 auto}
+    #register-newsletter {padding-left:0px;}
+    .myform {padding-left:21px}
+    .event img {width:100%}
+    .modal-body .event { padding: 0 15px 10px; height: 300px; overflow-y: scroll; overflow-x: hidden;}
+    .prc1 {width:50%}
+    .product-details .item.slide {height:auto !important}
+
+
+
+
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    .logo {z-index:99; left:10px}
+    .panel-body {width:96%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute; left:20px;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:16px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .nw-filter input {width:78% !important}
+    .filter-container input[type=text] {width:78%; padding:5px 10px 5px 10px; margin-right:1.2%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:115px; font-size:15px; float:right}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1%;  margin-left: 1.2%; width:29.2%}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    /*.element {width:45%; margin:15px 10px 15px 17px !important} */
+    .tab-content {padding:45px 0px 15px}
+    /*.tab-content > .active {display: block; max-height: 360px; overflow-y: scroll; overflow-x: hidden;}*/
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-3px; top:32px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:250px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 98%;   left: 1%;}
+    ul.mytabs {margin-bottom:15px}
+    /*.mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}*/
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:300px; overflow-y:scroll}
+    .modal-body .my-menu {width:70%; height:auto; margin:0 auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    /*.mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}*/
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    /*.wrapper.mymodal ul.tabs li {display:block}*/
+    .wrapper.mymodal .btn-group { position: absolute; top: -30px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px; height: 220px;  overflow-x: hidden;   overflow-y: scroll;}
+
+}
+@media (max-width: 600px) and (min-width: 551px) and (orientation: landscape) {
+
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:200px !important; overflow-y:scroll; overflow-x:hidden}
+    .nw-filter input {width:77% !important}
+    #register-newsletter {padding-left:0}
+    .my-menu ul li, .my-menu ul {    margin-bottom: 0px;}
+    .menu-img img {width:100px}
+    .my-menu.my-profile:first-child {height:304px !important; overflow-x:hidden; overflow-y:scroll; width:67%}
+    .filter-container .btn, .myform .btn { width: 108px; font-size: 14px; float: right;}
+    #filter .myform input {width:28%}
+    /*.element {width: 45.2%; margin: 15px 11px 15px 14px !important;}*/
+    .mytabs li {
+        width: auto;
+        margin-right: 20px;
+    }
+    .tab-content > .active {
+        display: block;
+        max-height: 200px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    #squarespaceModal-6 {z-index:99999999999}
+    .search-bar {margin:0 auto}
+    .orgchrt .tm-mbr1 {margin-right:20%}
+    .orgchrt .qulifd {margin-left:12.5%}
+    #primary-nav.mobile li a { padding: 2%;}
+    .menu-img img{margin:0 auto}
+    #register-newsletter {padding-left:0px;}
+    .myform {padding-left:21px}
+    .event img {width:100%}
+    .modal-body .event { padding: 0 15px 10px; height: 240px; overflow-y: scroll; overflow-x: hidden;}
+    .prc1 {width:50%}
+    .product-details .item.slide {height:auto !important}
+
+
+
+
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    .logo {z-index:99; left:10px}
+    .panel-body {width:96%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute; left:20px;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:16px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .nw-filter input {width:75% !important}
+    .filter-container input[type=text] {width:76%; padding:5px 10px 5px 10px; margin-right:1.2%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:115px; font-size:15px; float:right}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1%;  margin-left: 1.2%; }
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:45%; margin:15px 10px 15px 16px !important}
+    .tab-content {padding:45px 0px 15px}
+    /*.tab-content > .active {display: block; max-height: 360px; overflow-y: scroll; overflow-x: hidden;}*/
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-3px; top:32px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:250px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 98%;   left: 1%;}
+    ul.mytabs {margin-bottom:15px}
+    /*.mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}*/
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:300px; overflow-y:scroll}
+    .modal-body .my-menu {width:70%; height:auto; margin:0 auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    /*.mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}*/
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    /*.wrapper.mymodal ul.tabs li {display:block}*/
+    .wrapper.mymodal .btn-group { position: absolute; top: -30px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px; height: 220px;  overflow-x: hidden;   overflow-y: scroll;}
+
+
+}
+
+@media (max-width: 550px) and (min-width: 481px) and (orientation: landscape) {
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:200px !important; overflow-y:scroll; overflow-x:hidden}
+    #squarespaceModal-6 {z-index:99999999999}
+    .search-bar {margin:0 auto}
+    .orgchrt .tm-mbr1 {margin-right:20%}
+    .orgchrt .qulifd {margin-left:12.5%}
+    #primary-nav.mobile li a { padding: 2%;}
+    .menu-img img{margin:0 auto}
+    #register-newsletter {padding-left:15px;}
+    .myform {padding-left:21px}
+    .event img {width:100%}
+    .modal-body .event { padding: 0 15px 10px; height: 300px; overflow-y: scroll; overflow-x: hidden;}
+    .prc1 {width:50%}
+    .product-details .item.slide {height:auto !important}
+
+
+
+
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    .logo {z-index:99; left:10px}
+    .panel-body {width:96%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute; left:20px;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:16px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .filter-container input[type=text] {width:77%; padding:5px 10px 5px 10px; margin-right:1%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:20%; font-size:12px}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1.5%;  margin-left: 1.29%; width:30%}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:46%; margin:15px 11px 15px 12px !important}
+    .tab-content {padding:45px 0px 15px}
+    .tab-content > .active {display: block; max-height: 360px; overflow-y: scroll; overflow-x: hidden;}
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-3px; top:32px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:250px !important}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 98%;   left: 1%;}
+    ul.mytabs {margin-bottom:15px}
+    /*.mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}*/
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:300px; overflow-y:scroll}
+    .modal-body .my-menu {width:70%; height:auto; margin:0 auto}
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    /*.mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}*/
+    .mymodal .wrapper {height:auto; overflow:visible}
+    .table {margin-top:0}
+    /*.wrapper.mymodal ul.tabs li {display:block}*/
+    .wrapper.mymodal .btn-group { position: absolute; top: -30px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px; height: 220px;  overflow-x: hidden;   overflow-y: scroll;}
+
+
+}
+
+@media (max-width: 480px) and (orientation: landscape) {
+    #squarespaceModal-2 .event, #squarespaceModal-3 .event { height:200px !important; overflow-y:scroll; overflow-x:hidden}
+    .my-menu ul li, .my-menu ul {    margin-bottom: 0px;}
+    .menu-img img {width:100px}
+    .my-menu.my-profile:first-child {height:304px !important; overflow-x:hidden; overflow-y:scroll; width:67%}
+    .modal-body .event {padding:0 5px 0px !important; margin-bottom:15px; height: 240px;
+        overflow-y: scroll;
+        overflow-x: hidden;}
+    .event img { margin-bottom: 20px;  width: 100%;}
+    .search-bar {max-width:100% !important}
+    #primary-nav-button {top:0; left:0; z-index:999; background:#fff !important; height:30px; border:none; padding-bottom:30px}
+    #primary-nav-button:before {line-height:.91}
+    #primary-nav-button:focus {border:none; outline:none;}
+    #primary-nav.mobile {top:31px; left:0; background:#5f645d; z-index:999999}
+    #primary-nav.mobile li {border:none}
+    #primary-nav.mobile .sub-menu {background:#777; border:none}
+    #primary-nav.mobile li.selected > a {border:none}
+    #squarespaceModal-6 {z-index:9999999}
+    .element img {width:100%}
+    .element {height:auto}
+    .logo {z-index:99; left:10px}
+    .panel-body {width:100%; border-radius:20px}
+    /*.modal {left:-15px}*/
+    .panel-tabs > li > a {padding:15px 30px !important}
+    .modal-open .modal {  overflow-x: hidden;    overflow-y: hidden;}
+    .panel-body .form-group {padding:0 !important}
+    .aslider {height:260px}
+    .slide1 {background-size:cover;}
+    .slide1 img { width:100% !important; height:100% !important}
+    .aslider-prev .fa {margin-left:15px; font-size:30px;}
+    .aslider-next .fa {font-size:30px; }
+    .aslider-nav {top:60%; z-index:99999999}
+    .slide1>.caption {
+        bottom:10px;text-align:left; position:absolute; left:20px;	color:#000; width:90%; height:130px;z-index:9999;	}
+    .caption h1{text-align:left; line-height:normal;font-size:30px; text-shadow:1px 1px 1px #333;color:#fff;font-weight:200;margin-bottom:15px;position:relative; font-family: 'MyriadPro-Bold' !important;}
+    .caption p {font-size:14px; line-height:normal; text-shadow:1px 1px 1px #333;}
+    .prdct-box { padding-top: 20px;    border-left: none;    padding-bottom: 25px;    padding-left: 0;}
+    .filter-container input[type=text] {width:77%; padding:5px 10px 5px 10px; margin-right:1%}
+    .filter-container .btn, .myform .btn { padding:10px 2px 14px; width:20%; font-size:12px; float:right}
+    #filter .myform label {padding-left:0; width:12.5% }
+    #filter .myform input {margin-right: 1%;  margin-left: 1%; width:29%}
+    .no-pd, .no-pd1 { padding:0}
+    .social_icons > a {margin:0 2px; width:42px; height:42px;}
+    .element {width:100%; margin:15px 0px 15px 2px !important;}
+    .tab-content {padding:45px 0px 15px}
+    .tab-content > .active {display: block; max-height: 200px; overflow-y: scroll; overflow-x: hidden;}
+    .top-bg {height:200px}
+    #page-inside5, #page-inside6, #page-inside2, #page-inside7, #page-inside4 {height:320px; background-size:20%}
+    #page-inside3 {height:auto}
+    .event-title {padding-top: 125px; padding-left: 10px; width: 80%;}
+    .event-title p {line-height:normal; font-size:14px}
+    .padd-all-30 {padding:5px}
+    .orang-bg, .blue-bg {  padding: 30px 0px;   margin-top: 30px;   margin-bottom: 30px;}
+    .abt-vid {width:100%}
+    .event-title h1 {font-size:30px}
+    .close {right:-7px; top:47px;}
+    .event h3 {height:auto; margin-top:5px; overflow:visible}
+    #myCarousel .item img {height:100%}
+    #myCarousel .item {height:200px !important}
+    .section-5 { padding: 30px 0 30px;  margin-top: -30px;}
+    .myp {margin-top:10px; margin-bottom:15px}
+    .team-bg { background: url(../img/team.jpg);  background-repeat: no-repeat;  background-position: center center;  height: 100%;   width: 100%;    background-size: cover;}
+    ul.cl-map li {font-size:14px; margin-left:5px; margin-right:5px}
+    ul.cl-map {margin-bottom:25px; text-align:center}
+    .orgchrt .tm-mbr {margin-top:30px}
+    .orgchrt .qulifd:before {width:160px}
+    .orgchrt .tm-mbr1:before {left:-115px}
+    .mymodal { background: white;  border-radius: 20px;  width: 96%;   left: 2.5%;}
+    ul.mytabs {margin-bottom:15px}
+    .mytabs li a {display:block}
+    .tabs a {padding:5px 0 0 20px; margin-left:15px}
+    .mytabs li {  width: 100%;    margin-right: 0;    display: block;   float: none;}
+    .tabgroup, .tabgroup1 {padding:10px 0}
+    .nw-pd {padding-left:15px; padding-right:15px}
+    .mymodal.mdl .wrapper {height:300px; overflow-y:scroll}
+    .modal-body .my-menu {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+    }
+    #squarespaceModal-4 .modal-body {padding:5px}
+    .menu-title {font-size:20px}
+    .ylw {font-size:16px}
+    .close.back {top:8px !important; right:14px !important}
+    .transf { position: absolute;   right: 20px;   top: 75px;    z-index: 99;}
+    .wallet-box {padding-top:120px}
+    .wallet-box .title {float: none; width: 100%;   margin-bottom: -5px;}
+    .wallet-box h3 {height:auto; text-align:center; padding-left:0; color:#fff; background:none; padding-top:10px; width:100%}
+    .wallet-box .stats {float: none; width: 100%; padding: 10px 5px; height: 120px; border-radius: 20px; margin-top: 15px;
+        text-align: center;}
+    .wallet-box .ft-box, .wallet-box .sd-box {margin-bottom:20px; margin-top:10px}
+    .wallet-box .sd-box h3 { padding-left: 0;}
+    .mymodal ul.tabs li {float:none; width:100%}
+    .mymodal ul.tabs {margin-bottom:15px}
+    .mymodal ul.tabs h4 {padding-bottom:0}
+    .mymodal .wrapper {height:260px; overflow-y:scroll; overflow-x:hidden}
+    .table {margin-top:0}
+    .wrapper.mymodal ul.tabs li {display:block}
+    .wrapper.mymodal .btn-group { position: absolute; top: -85px;   right: 0px;}
+    .breadcrumb {margin-top:150px}
+    .breadcrumb .btn-primary {margin-bottom:10px}
+    .up-form {    padding: 30px 10px; height: 220px;  overflow-x: hidden;   overflow-y: scroll;}
+
+}
+
+
+
+#squarespaceModal-4 {z-index:99999 !important}
+
+
+
+
+#squarespaceModal::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    background-color:#edeadf;
+
+
+}
+
+#squarespaceModal::-webkit-scrollbar
+{
+    width:6px !important;
+
+    background-color: #edeadf;
+    margin-right:5px !important;
+    margin-left:5px !important
+}
+
+#squarespaceModal::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    border-radius: 8px;
+    background-color:#ffc72e;
+    width:6px !important;
+}
+
+
+#squarespaceModal-2 .event, #squarespaceModal-3 .event { height:450px; overflow-y:scroll; overflow-x:hidden}
+
+
+
+/* New Style */
+
+
+.chat-box, .enter-message{
+    background:#fff;
+    padding:20px;
+    color:#a1a1a1;
+
+
+}
+.chat-box {border:#7b7b7b solid 1px; margin-top:20px; margin-bottom:30px}
+.chat-box .message-box{
+    /*padding:18px 0 10px;*/
+    clear:both;
+    border-radius:10px
+}
+
+.picture span{
+    font-weight:bold;
+    font-size:12px;
+    clear:both;
+    display:block;
+    text-align:center;
+    margin-top:3px;
+}
+.message{
+
+    display:inline-block;
+    padding:12px;
+    max-width:320px;
+    border-radius:2px;
+    position:relative;
+}
+
+.message span{
+    color:#555;
+    font-weight:bold;
+}
+.message p{
+    padding-top:5px;
+    margin-bottom:0;
+}
+
+
+.enter-message{
+    padding:13px 0px;
+    margin-top:20px;
+}
+.enter-message input.msg {
+    border: #a6a7a8 solid 1px;
+    padding: 10px 12px;
+    background: #fff;
+    width: 100%;
+    border-radius: 0;
+    height: 80px;
+    margin-bottom:15px
+}
+/*.enter-message .file-upload1 {float:right; width:11%; }*/
+.enter-message .file-upload1 label {padding:6px 30px}
+.enter-message a {float:right;  margin-right:0; margin-bottom:15px; padding:6px 32px; margin-left:15px}
+.enter-message input.msg:focus { border: #a6a7a8 solid 1px !important; outline:#111 !important}
+.enter-message a.send{
+    padding:10px 15px;
+    background:#6294c2;
+    border-radius:2px;
+    float:right;
+}
+
+.left-msg .message-box {display:inline-block; background:#e2e2e2; color:#333; position:relative; margin-bottom:10px; margin-top:10px}
+.right-msg .message-box {display:inline-block;  background:#fce0c0; color:#333; position:relative;  margin-bottom:10px; margin-top:10px}
+.chat-box .right-msg {text-align:right;}
+.new-upload {display:inline-block; margin-right:10px}
+.new-upload .file-upload__label {float:none; }
+
+.file-upload1 {
+    position: relative;
+    display: block;
+}
+
+.file-upload__label {
+
+    float:right;
+    margin-right:0 !important
+}
+.nw-pad {padding:2px 24px; }
+.file-upload__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1;
+    width:0;
+    height: 100%;
+    opacity: 0;
+}
+
+.btn-org {font-family: inherit !important ; font-size:15px; font-weight:normal; line-height:30px;  border-radius:0!important; margin-right:10px; background:#ff7a59; padding:6px 16px; color:#fff !important; }
+.btn-gry {font-family: inherit !important ; font-size:15px; font-weight:normal; line-height:30px;  border-radius:0!important; margin-right:10px; background:#5f6062 !important; color:#fff !important; padding:6px 16px }
+
+
+#wrapper {
+    /*  position: absolute;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 150px;
+      background: white;
+      box-shadow: 0 0 5px grey;
+      border-radius: 4px;z-index:99999999 !important
+      */
+
+}
+
+.editable {
+    text-decoration: none !important;
+    padding-bottom: 0;
+    border-bottom: 1px dashed darkgrey;
+}
+
+#--editable {
+    background: #212121;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 2px #2a0085;
+    border-radius: 4px;
+    padding: 15px;
+    z-index:9999999 !important
+}
+#--editable input[type=text] {
+    background: #e0e0e0;
+    border: 0;
+    outline: 0;
+    padding: 5px;
+    box-shadow: 0 0 5px #080808;
+    border-radius: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #651fff;
+}
+#--editable button {
+    padding: 5px 12px;
+    outline: none;
+    border: 0;
+    border-radius: 2px;
+    background: #651fff;
+    color: white;
+    box-shadow: 0 0 5px #212121;
+}
+
+
+
+/*new*/
+.expander-list, .expander-list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+.expander-list li {
+    margin: 0
+}
+.expander-list .expander {
+    float: right;
+    cursor: pointer;
+    padding: 0 8px;
+    font-family: Verdana, Arial, Helvetica, sans-serif
+}
+.expander-list .name {
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding: 7px 0 6px;
+    color:#003b4f;
+    font-size:16px;
+    font-weight:bold
+}
+.expander-list .name a {color:#003b4f;}
+.expander-list ul .name {
+    padding-left: 21px
+}
+.expander-list ul ul .name {
+    padding-left: 42px
+}
+.expander-list ul ul ul .name {
+    padding-left: 63px
+}
+.expander-list .last>.name {
+    border: none
+}
+
+
+.navbar-header.visible-me {width:100%}
+
+@media (min-width:992px){
+
+    .visible-me {
+
+        display:none !important;
+    }
+}
+
+.visible-me .navbar-toggle {
+    float: none;
+    margin-left: -25px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.visible-me .navbar-toggle .icon-bar {background:#222}
+.dash-pages h1 {font-family: inherit !important; color:#5f6062; margin-top:15px; font-size:33px}
+.support h1::before {background:url(../img/supporty.png);}
+.dash-pages h1::before { width:57px; margin-right:15px; content:""; margin-top:-10px; height:57px; display:inline-block; vertical-align:middle}
+
+.msgs-wrapper {max-height:350px; overflow-y:scroll; padding-right:20px}
+
+#style-1::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+.span60 {width:auto !important; padding:5px 0 !important}
